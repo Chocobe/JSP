@@ -32,4 +32,15 @@
 		<servlet-name>fourth</servlet-name>
 		<url-pattern>/fourth</url-pattern>
 	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>fifth</servlet-name>
+		<servlet-class>com.edu.test.FifthServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>fifth</servlet-name>
+		<url-pattern>/what</url-pattern>
+	</servlet-mapping>
 </web-app>
