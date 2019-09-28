@@ -22,15 +22,14 @@
 		<url-pattern>/second</url-pattern>
 	</servlet-mapping>
 	
-	<!--
+	
 	<servlet>
-		<servlet-name>third</servlet-name>
-		<servlet-class>com.edu.test.ThirdServlet</servlet-class>
+		<servlet-name>fourth</servlet-name>
+		<servlet-class>com.edu.test.FourthServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>third</servlet-name>
-		<url-pattern>/third</url-pattern>
+		<servlet-name>fourth</servlet-name>
+		<url-pattern>/fourth</url-pattern>
 	</servlet-mapping>
-	-->
 </web-app>
