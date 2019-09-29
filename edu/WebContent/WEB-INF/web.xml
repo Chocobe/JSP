@@ -34,4 +34,15 @@
 		<servlet-name>Third</servlet-name>
 		<url-pattern>/hello3</url-pattern>
 	</servlet-mapping>
+	
+	<!-- AdditionalInfoServlet -->
+	<servlet>
+		<servlet-name>addInfo</servlet-name>
+		<servlet-class>com.edu.test.AdditionalInfoServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>addInfo</servlet-name>
+		<url-pattern>/addInfo</url-pattern>
+	</servlet-mapping>
 </web-app>
