@@ -23,4 +23,15 @@
 		<servlet-name>Second</servlet-name>
 		<url-pattern>/Hello2</url-pattern>
 	</servlet-mapping>
+	
+	<!-- ThirdServlet -->
+	<servlet>
+		<servlet-name>Third</servlet-name>
+		<servlet-class>com.edu.test.ThirdServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Third</servlet-name>
+		<url-pattern>/hello3</url-pattern>
+	</servlet-mapping>
 </web-app>
