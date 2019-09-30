@@ -68,4 +68,20 @@
 		<servlet-name>initParam</servlet-name>
 		<url-pattern>/initParamTest</url-pattern>
 	</servlet-mapping>
+	
+	<!-- ServletConfigTestServlet -->
+	<servlet>
+		<servlet-name>servletConfigTest</servlet-name>
+		<servlet-class>com.edu.test.ServletConfigTestServlet</servlet-class>
+		
+		<init-param>
+			<param-name>charset</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>servletConfigTest</servlet-name>
+		<url-pattern>/servletConfigTest</url-pattern>
+	</servlet-mapping>
 </web-app>
