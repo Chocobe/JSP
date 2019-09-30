@@ -45,4 +45,27 @@
 		<servlet-name>addInfo</servlet-name>
 		<url-pattern>/addInfo</url-pattern>
 	</servlet-mapping>
+	
+	<!-- InitParamServlet -->
+	<servlet>
+		<servlet-name>initParam</servlet-name>
+		<servlet-class>com.edu.test.InitParamServlet</servlet-class>
+		
+		<init-param>
+			<param-name>id</param-name>
+			<param-value>guest</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>1004</param-value>
+		</init-param>
+		
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>initParam</servlet-name>
+		<url-pattern>/initParamTest</url-pattern>
+	</servlet-mapping>
 </web-app>
