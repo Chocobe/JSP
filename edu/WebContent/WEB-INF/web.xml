@@ -84,4 +84,10 @@
 		<servlet-name>servletConfigTest</servlet-name>
 		<url-pattern>/servletConfigTest</url-pattern>
 	</servlet-mapping>
+	
+	<!-- ServletContextTest -->
+	<context-param>
+		<param-name>contextConfig</param-name>
+		<param-value>/WEB-INF/context.xml</param-value>
+	</context-param>
 </web-app>

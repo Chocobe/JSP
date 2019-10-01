@@ -19,8 +19,9 @@ public class ServletContextTest1Servlet extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 		
 		ServletContext sc = this.getServletContext();
-		out.print("Context : " + sc);
+		String location = sc.getInitParameter("contextConfig");
 		
+		out.print("location : " + location);
 		out.close();
 	}
 }
