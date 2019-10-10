@@ -27,7 +27,7 @@
 	
 ---
 
-* ServletConfig 에 변수 생성하기
+* ServletConfig 에 변수 동적으로 생성하기
 
 	* 서블릿의 초기화 때 생성되는 객체 (``<servlet>``태그 내에서 사용)
 	
@@ -45,7 +45,7 @@
 	
 ---
 	
-* ServletContext 에 변수 생성하기
+* ServletContext 에 동적으로 변수 생성하기
 
 	* 서블릿 컨테이너가 시작될 때 생성되는 객체 (각 웹 애플리케이션 단위로 생성)
 	
@@ -55,3 +55,22 @@
 		<param-value>변수값</param-value>
 	</context-param>
 	```
+	
+---
+
+* ServletContext를 사용하여, 서블릿간 데이터 공유하기
+
+	* ServletContext 에 데이터 저장하기
+	
+		```java
+		ServletContext sc = getServletContext();
+		sc.setAttribute("키 이름", Object);
+		```
+		
+	* ServletContext 에 있는 데이터 읽어오기 (반환값은 Object형 이기때문에 사용전에 형변환 필요)
+	
+		```java
+		ServletContext sc = getServletContext();
+		Object data = sc.getAttribute("키 이름");
+		
+---
