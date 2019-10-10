@@ -27,7 +27,7 @@
 	
 ---
 
-* ServletConfig 에 변수 동적으로 생성하기
+* ServletConfig 에 동적으로 변수 생성하기
 
 	* 서블릿의 초기화 때 생성되는 객체 (``<servlet>``태그 내에서 사용)
 	
