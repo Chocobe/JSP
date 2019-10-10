@@ -1,6 +1,30 @@
 # Servlet
 
-* ServletConfig 에 변수 생성하기
+1. Servlet 페이지 설정하기 (web.xml 설정)
+
+	* ``web.xml``을 사용하여 서블릿 설정하기
+	```xml
+	<servlet>
+		<servlet-name>서블릿 이름</servlet-name>
+		<servlet-class>서블릿 경로</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>서블릿 이름</servlet-name>
+		<url-pattern>URI 경로 지정</url-pattern>
+	</servlet-mapping>
+	```
+	
+1. Servlet 페이지 설정하기 (@WebServlet 어노테이션)
+	
+	* 해당 서블릿 파일의 클래스명에 어노테이션 추가
+	```java
+	@WebServlet("URI 경로 지정")
+	public class ... {}
+	```
+	
+
+1. ServletConfig 에 변수 생성하기
 
 	* 서블릿의 초기화 때 생성되는 객체 (``<servlet>``태그 내에서 사용)
 	
@@ -17,7 +41,7 @@
 	```
 	
 	
-* ServletContext 에 변수 생성하기
+1. ServletContext 에 변수 생성하기
 
 	* 서블릿 컨테이너가 시작될 때 생성되는 객체 (각 웹 애플리케이션 단위로 생성)
 	
