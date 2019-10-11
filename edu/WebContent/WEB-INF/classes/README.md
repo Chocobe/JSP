@@ -75,7 +75,7 @@
 		
 ---
 
-* Cookie (클라이언트 단위로 정보 공유 - 웹 브라우저에 저장 방식)
+* Cookie (클라이언트 단위로 정보 공유 - 클라이언트의 *상태정보*를 웹 브라우저에 저장하는 방식)
 
 	* Cookie 생성
 		
@@ -91,8 +91,32 @@
 		
 	* Cookie 추출
 	
-		* 쿠키 가져오기 : ``HttpServletRequest 객체.getCookie()`` -> ``Cookie[]``로 반환
+		* 쿠키 가져오기 : ``HttpServletRequest 객체.getCookies()`` -> ``Cookie[]``로 반환
 		
 		* 쿠키 이름 추출하기 : ``쿠키객체.getName()``
 		
 		* 쿠키 값 추출하기 : ``쿠키객체.getValue()``
+		
+---
+
+* Session (클라이언트 단위로 정보 공유 - 클라이언트의 *상태정보*를 서버에 저장하는 방식)
+
+	* Session 생성
+	
+		* ``HttpServletRequest객체.getSession()`` : 세션이 있으면 기존 세션 반환, 없으면 새로 생성하여 반환
+		
+		* ``HttpServletRequest객체.getSession(true)`` : 위와 동일
+		
+		* ``HttpServletRequest객체.getSession(false)`` : 기존 세션이 있을때만 세션 반환, 없으면 null 반환
+		
+	* Session 메소드
+	
+		* ``HttpSession객체.getAttribute(String name)`` : 세션에서 데이터 추출
+		
+		* ``HttpSession객체.setAttribute(String name, Object value)`` : 세션에 데이터 저장
+		
+		* ``HttpSession객체.removeAttribute(String name)`` : 세션에서 해당 데이터 삭제
+		
+		* ``HttpSession객체.isNew()`` : 서버에서 새로운 세션을 생성한 경우라면 true, 기존 세션이었다면 false 반환
+		
+		* ``HttpSession객체.invalidate()`` : 현재 세션을 삭제한다.
