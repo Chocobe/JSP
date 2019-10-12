@@ -97,9 +97,19 @@
 		<filter-class>com.edu.filter.FlowFilterOne</filter-class>
 	</filter>
 	
+	<filter-mapping>
+		<filter-name>flow1</filter-name>
+		<url-pattern>/myFilterTest</url-pattern>
+	</filter-mapping>
+	
 	<!-- FlowFilter Two -->
 	<filter>
 		<filter-name>flow2</filter-name>
 		<filter-class>com.edu.filter.FlowFilterTwo</filter-class>
 	</filter>
+	
+	<filter-mapping>
+		<filter-name>flow2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>
