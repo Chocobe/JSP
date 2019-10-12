@@ -1,7 +1,7 @@
 # Servlet - 고급 - Filter
 
-> #### Filter(필터) 란?
->
+### Filter(필터) 란?
+
 >	Servlet이 수행되기 **전** 또는 **후** 에 추가 기능을 수행할 수 있도록 한다.
 	
 ---
@@ -30,11 +30,12 @@
 >			```
 
 
+
 >	#### web.xml 파일에 Filter 클래스 설정하기
 >
->	```java
->		<filter>
->			<filter-name>논리적 필터 이름</filter-name>
->			<filter-class>페키지 경로가 포함된 실제 Filter 클래스 이름</filter-class>
->		</filter>
->		```
+>	*	```java
+>			<filter>
+>				<filter-name>논리적 필터 이름</filter-name>
+>				<filter-class>페키지 경로가 포함된 실제 Filter 클래스 이름</filter-class>
+>			</filter>
+>			```
