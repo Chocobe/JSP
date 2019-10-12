@@ -160,10 +160,14 @@
 			
 				* 클라이언트의 요청페이지에서 다른 페이지(포워딩 페이지)로 수행제어와 응답을 위임하는 방식
 			
-				``RequestDispatcher객체.forward(ServletRequest req, ServletResponse resp);``
+				```java
+				RequestDispatcher객체.forward(ServletRequest req, ServletResponse resp);
+				```
 			
 			* include()
 			
 				* 클라이언트의 요청페이지에서 다른 페이지(포함 페이지)에 수행제어를 전달하고, 결과는 클라이언트가 요청한 페이지로 응답하는 방식
 				
-				``RequestDispatcher객체.include(ServletRequest req, ServletResponse resp);``
+				```java
+				RequestDispatcher객체.include(ServletRequest req, ServletResponse resp);
+				```
