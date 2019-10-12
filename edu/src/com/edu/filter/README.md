@@ -21,3 +21,7 @@
 >		* ```java
 >			public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) {}
 >			```
+>
+>		* ```java
+>			public void destroy() {}
+>			```
