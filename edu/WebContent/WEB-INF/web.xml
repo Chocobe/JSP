@@ -90,4 +90,16 @@
 		<param-name>contextConfig</param-name>
 		<param-value>/WEB-INF/context.xml</param-value>
 	</context-param>
+	
+	<!-- FlowFilter One -->
+	<filter>
+		<filter-name>flow1</filter-name>
+		<filter-class>com.edu.filter.FlowFilterOne</filter-class>
+	</filter>
+	
+	<!-- FlowFilter Two -->
+	<filter>
+		<filter-name>flow2</filter-name>
+		<filter-class>com.edu.filter.FlowFilterTwo</filter-class>
+	</filter>
 </web-app>
