@@ -1,7 +1,5 @@
 # Servlet / JSP
 
----
-
 > ### Servlet
 >
 >	#### [:camel: 서블릿 - 기본](https://github.com/Chocobe/JSP_practice/tree/master/edu/src/com/edu/test "서블릿 - 기본")
