@@ -1,4 +1,4 @@
-# Servlet
+# Servlet - 기본
 
 * Servlet 페이지 설정하기 (web.xml 설정)
 
