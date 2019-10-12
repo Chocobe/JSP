@@ -121,11 +121,14 @@
 		
 		* ``HttpSession객체.invalidate()`` : 현재 세션을 삭제한다.
 		
-		
+---
+
 * HttpServletRequest (페이지별로 상태정보 공유하기 - HttpServletRequest객체를 전달하는 방식)
 
 	* HttpServletResponse객체의 sendRedirect 메소드
 	
+		* ``resp.sendRedirect("URL값")`` 형식으로, 해당 URL로 페이지를 이동하는 명령이다.
+		
 		```java
 		protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
 						throws ServletException {
@@ -133,4 +136,4 @@
 		}
 		```
 		
-		* ``resp.sendRedirect("URL값")`` 형식으로, 해당 URL로 페이지를 이동하는 명령이다.
+		
