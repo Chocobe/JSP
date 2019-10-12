@@ -66,10 +66,13 @@
 >							throws ServletException, IOException {
 >				// 대상 서블릿 수행 전에 수행할 코드
 >
->				// chain.doFilter() 메소드를 통해, 다음 Filter조건이 있다면 해당 Filter 클래스의 doFilter() 메소드 호출
+>				// chain.doFilter() 메소드를 통해서 다음 Filter조건이 있다면,
+>				// 		해당 Filter 클래스의 doFilter() 메소드 호출
 >				// 더이상 Filter 조건이 없다면, 클라이언트가 호출한 대상 서블릿의 service() 메소드 수행
 >				chain.doFilter(req, resp);
 >
 >				// 클라이언트가 호출한 서블릿의 수행 후, 수행할 코드
 >			}
 >			```
+>
+>	* Filter 클래스들의 순서는, **web.xml**에서 작성한 ``<filter-mapping>``태그의 작성 순서에 따라 수행된다.
