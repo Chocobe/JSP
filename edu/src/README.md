@@ -144,13 +144,17 @@
 		
 				* URL값에는 절대경로만 지정 가능
 			
-				``ServletContext객체.getRequestDispatcher("URL값");``
+				```java
+				ServletContext객체.getRequestDispatcher("URL값");
+				```
 			
 			* ServletRequest 객체로 RequestDispatcher 객체 생성하기
 			
 				* URL값에는 상대경로, 절대경로 둘 다 지정가능
 				
-				``ServletRequest객체.getRequestDispatcher("URL값");``
+				```java
+				ServletRequest객체.getRequestDispatcher("URL값");
+				```
 	
 		* 요청 재지정하기
 		
@@ -171,3 +175,6 @@
 				```java
 				RequestDispatcher객체.include(ServletRequest req, ServletResponse resp);
 				```
+				
+---
+
