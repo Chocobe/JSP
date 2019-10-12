@@ -14,10 +14,10 @@
 >	
 >	* javax.servlet.Filter 인터페이스의 추상 메소드 3개를 구현한다.
 >		
->	* ```java
-		public void init(FilterConfig config) {}
-		```
+>		* ```java
+>		public void init(FilterConfig config) {}
+>		```
 >				
->	* ```java
-		public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) {}
-		```
+>		* ```java
+>		public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) {}
+>		```
