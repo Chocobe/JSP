@@ -54,7 +54,7 @@
 ---
 
 #### Filter 클래스의 실행 순서
->
+
 >	1. 클라이언트가 요청한 페이지가 ``<filter-mapping>``의 ``<url-pattern>``에 설정 됬는지 파악한다.
 >
 >	1. Filter의 대상이라면, 해당 Filter의 ``<filter-name>`` Filter 클래스의 ``doFilter()`` 메소드를 호출한다.
@@ -76,3 +76,13 @@
 >			```
 >
 >	* Filter 클래스들의 순서는, **web.xml**에서 작성한 ``<filter-mapping>``태그의 작성 순서에 따라 수행된다.
+
+---
+
+#### FilterChain 클래스
+
+>	* ``doFilter()`` 메소드의 세번짜 인자 ``FilterChain``은 서블릿이 실행될 때 처리흐름을 제어하는 역할을 한다.
+>
+>	* 만약, ``doFilter()`` 메소드 내부에서 ``FilterChain객체.doFilter()``메소드가 생략 된다면, 처리흐름은 여기서 중단된다.
+
+---
