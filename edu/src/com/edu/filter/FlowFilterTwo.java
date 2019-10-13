@@ -10,16 +10,20 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 public class FlowFilterTwo implements Filter {
+	private String charset;
+	
+	
 	@Override
 	public void init(FilterConfig config) {
 		System.out.println("init() 메소드 호출 ... Two");
+		charset = config.getInitParameter("en");
 	}
 	
 	
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) 
 					throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
+		req.setCharacterEncoding(charset);
 		System.out.println("doFilter() 메소드 호출 전... Two");
 		
 		chain.doFilter(req, resp);

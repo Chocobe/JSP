@@ -5,7 +5,10 @@
 >	* Servlet이 수행되기 **전** 또는 **후** 에 추가 기능을 수행할 수 있도록 한다.
 >
 >	* 대표적으로 사용하는 기능은 한글처리를 위한 Encoding 설정을 구현한다.
-	
+>
+>	* ``web.xml``의 ``<filter>`` 내용은, ``FilterConfig`` 객체에 들어있다.
+>
+>	* ``web.xml``의 ``<filter-mapping>`` 내용은, ``FilterChain`` 객체에 들어있다.
 ---
 
 ### Filter 클래스 만들기
