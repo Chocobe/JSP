@@ -19,6 +19,7 @@ public class FlowFilterTwo implements Filter {
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) 
 					throws ServletException, IOException {
+		req.setCharacterEncoding("UTF-8");
 		System.out.println("doFilter() 메소드 호출 전... Two");
 		
 		chain.doFilter(req, resp);
