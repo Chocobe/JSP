@@ -69,7 +69,8 @@
 >			public void attributeReplaced(ServletRequestAttributeEvent e) {
 >				// ServletRequest 객체에 속성값이 변경될 때 호출되는 메소드
 >			}
->		}```
+>		}
+>		```
 
 
 #### HttpSession 객체
