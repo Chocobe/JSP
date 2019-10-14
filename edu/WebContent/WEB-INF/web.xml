@@ -123,4 +123,12 @@
 <!--  	<listener>
  		<listener-class>com.edu.listener.TestRequestListener</listener-class>
  	</listener> -->
+ 	
+ 	<listener>
+ 		<listener-class>com.edu.listener.TestSessionListener</listener-class>
+ 	</listener>
+ 	
+ 	<listener>
+ 		<listener-class>com.edu.listener.TestSessionAttributeListener</listener-class>
+ 	</listener>
 </web-app>

@@ -14,9 +14,11 @@
 
 ### Listener 구현하기
 
->	#### HttpServletRequest 객체
+### HttpServletRequest 객체
+
+>	#### ServletRequestListener 객체
 >
->	* ``HttpServletRequest``객체의 새성, 소멸에 대한 리스너는 ``ServletRequestListener`` 인터페이스를 구현하면 된다.
+>	* ``ServletRequest``객체의 새성, 소멸에 대한 리스너는 ``ServletRequestListener`` 인터페이스를 구현하면 된다.
 >
 >	* ``ServletRequestListener``객체는 웹서버가 시작할 때 생성된다.
 >
@@ -40,5 +42,38 @@
 >		'''
 
 
+>	#### ServletRequestAttributeListener 객체
+>
+>	* ``ServletRequest``객체 속성의 생성, 삭제, 변경에 대한 리스너는 ``ServletRequestAttributeListener`` 인터페이스를 구현하면 된다.
+>
+>	* ``ServletRequestAttributeListener`` 객체는 웹서버가 시작될 때 생생된다.
+>
+>	* ``ServletRequestAttributeListener`` 객체는 웹서버가 종료될 때 소멸한다.
+>
+>	* ``ServletRequestAttributeListener`` 구현
+>
+>	```java
+>		public class 클래스명 implements ServletRequestAttributeListener {
+>		
+>			@Override
+>			public void attributeAdded(ServletRequestAttributeEvent e) {
+>				// ServletRequest 객체에 속성을 생성할 때 호출되는 메소드
+>			}
+>
+>			@Override
+>			public void attributeRemoved(ServletRequestAttributeListener e) {
+>				// ServletRequest 객체에 속성을 삭제할 때 호출되는 메소드
+>			}
+>
+>			@Override
+>			public void attributeReplaced(ServletRequestAttributeEvent e) {
+>				// ServletRequest 객체에 속성값이 변경될 때 호출되는 메소드
+>			}
+>		}
+>		```
 
->	#### HttpSession 객체
+
+#### HttpSession 객체
+>
+>	* ``HttpSession``객체의 생성, 소멸에 대한 리스너는 ``HttpSessionListener`` 인터페이스를 구현하면 된다.
+>
