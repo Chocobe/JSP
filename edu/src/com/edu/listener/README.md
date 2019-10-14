@@ -70,7 +70,7 @@
 >			}
 >
 >			@Override
->			public void attributeRemoved(ServletRequestAttributeListener e) {
+>			public void attributeRemoved(ServletRequestAttributeEvent e) {
 >				// ServletRequest 객체에 속성을 삭제할 때 호출되는 메소드
 >			}
 >
@@ -83,6 +83,7 @@
 
 
 ### HttpSession 객체
+
 >	#### HttpSessionListener 객체
 >
 >	* ``HttpSession``객체의 생성, 소멸에 대한 리스너는 ``HttpSessionListener`` 인터페이스를 구현하면 된다.
@@ -135,6 +136,65 @@
 >			@Override
 >			public void attributeReplaced(HttpSessionBindingEvent e) {
 >				// HttpSession 객체의 속성값이 대체될 때 호출되는 메소드
+>			}
+>		}
+>		```
+
+
+### ServletContext 객체
+
+>	#### ServletContextListener 객체
+>
+>	* ``ServletContext`` 객체의 생성, 소멸에 대한 리스너는 ``ServletContextListener`` 인터페이스를 구현하면 된다.
+>
+>	* ``ServletContextListener`` 객체는 웹 서버가 시작될 때 생성된다.
+>
+>	* ``ServletContextListener`` 객체는 웹 서버가 종료될 때 소멸된다.
+>
+>	* ``ServletContextListener`` 구현
+>
+>	```java
+>		public class 클래스명 implements ServletContextListener {
+>		
+>			@Override
+>			public void contextInitialized(ServletContextEvent e) {
+>				// ServletContext 객체가 생성될 때 호출되는 메소드
+>			}
+>
+>			@Override
+>			public void contextDestroyed(ServletContextEvent e) {
+>				// ServletContext 객체가 소멸될 때 호출되는 메소드
+>			}
+>		}
+>		```
+
+
+>	#### ServletContextAttributeListener 객체
+>
+>	* ``ServletContext`` 객체 속성의 생성, 제거, 변경에 대한 리스너는, ``ServletContextAttributeListener`` 인터페이스를 구현하면 된다.
+>
+>	* ``ServletContextAttributeListener`` 객체는 웹서버가 시작될 때 생성된다.
+>
+>	* ``ServletContextAttributeListener`` 객체는 웹서버가 종료될 때 소멸된다.
+>
+>	* ``ServletContextAttributeListener`` 구현
+>
+>	```java
+>		public class 클래스명 implements ServletContextAttributeListener {
+>		
+>			@Override
+>			public void attributeAdded(ServletContextAttributeEvent e) {
+>				// ServletContext 객체의 속성을 생성할 때 호출되는 메소드
+>			}
+>
+>			@Override
+>			public void attributeRemoved(ServletContextAttributeEvent e) {
+>				// ServletContext 객체의 속성을 제거할 때 호출되는 메소드
+>			}
+>
+>			@Override
+>			public void attributeReplaced(ServletContextAttributeEvent e) {
+>				// ServletContext 객체의 속성값을 변경할 때 호출되는 메소드
 >			}
 >		}
 >		```

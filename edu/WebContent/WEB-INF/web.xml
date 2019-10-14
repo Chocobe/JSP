@@ -118,11 +118,10 @@
 		<filter-name>flow2</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
- -->	
- 
-<!--  	<listener>
+
+  	<listener>
  		<listener-class>com.edu.listener.TestRequestListener</listener-class>
- 	</listener> -->
+ 	</listener>
  	
  	<listener>
  		<listener-class>com.edu.listener.TestSessionListener</listener-class>
@@ -131,4 +130,10 @@
  	<listener>
  		<listener-class>com.edu.listener.TestSessionAttributeListener</listener-class>
  	</listener>
+ -->
+
+	<listener>
+		<listener-class>com.edu.listener.TestServletContextListener</listener-class>
+	</listener>
+
 </web-app>
