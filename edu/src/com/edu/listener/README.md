@@ -1,6 +1,6 @@
 # Servlet - 고급 - Listener
 
-### Listener(리스너) 란?
+## Listener(리스너) 란?
 
 >	* event(어떤 일) 이 발생했을 때, 수행되는 메소드를 가진 객체를 말한다.
 >
@@ -12,7 +12,7 @@
 
 ---
 
-### Listener 구현하기
+## Listener 구현하기
 
 ### HttpServletRequest 객체
 
