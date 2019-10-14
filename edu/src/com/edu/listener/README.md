@@ -31,6 +31,11 @@
 >			public void requestInitialized(ServletRequestEvent e) {
 >				// ServletRequest 객체가 생성될 때마다 호출되는 메소드
 >			}
+>
+>			@Override
+>			public void requestDestroyed(ServletRequestEvent e) {
+>				// ServletRequest 객체가 소멸될 때마다 호출되는 메소드
+>			}
 >		}
 >		'''
 
