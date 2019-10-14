@@ -14,7 +14,7 @@
 
 ## Listener 구현하기
 
-### HttpServletRequest 객체
+### Listener 설정하기
 
 >	#### web.xml 파일에 Listener 클래스 설정하기
 >
@@ -24,6 +24,9 @@
 >		</listener>
 >		```
 
+---
+
+### HttpServletRequest 객체
 
 >	#### 어노테이션으로 Listener 클래스 설정하기
 >
