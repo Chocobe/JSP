@@ -24,9 +24,7 @@
 >		</listener>
 >		```
 
----
 
-### HttpServletRequest 객체
 
 >	#### 어노테이션으로 Listener 클래스 설정하기
 >
@@ -34,6 +32,10 @@
 >		@WebListener
 >		public class 클래스명 implements 리스너_인터페이스 {}
 >		```
+
+---
+
+### HttpServletRequest 객체
 
 >	#### ServletRequestListener 객체
 >
