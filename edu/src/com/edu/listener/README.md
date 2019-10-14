@@ -16,7 +16,7 @@
 
 ### HttpServletRequest 객체
 
->	#### web.xml 파일에 Filter 클래스 설정하기
+>	#### web.xml 파일에 Listener 클래스 설정하기
 >
 >	```xml
 >		<listener>
@@ -24,6 +24,13 @@
 >		</listener>
 >		```
 
+
+>	#### 어노테이션으로 Listener 클래스 설정하기
+>
+>	```java
+>		@WebListener
+>		public class 클래스명 implements 리스너_인터페이스 {}
+>		```
 
 >	#### ServletRequestListener 객체
 >
