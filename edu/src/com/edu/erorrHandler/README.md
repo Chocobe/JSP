@@ -50,12 +50,12 @@
 >
 >	* 속성명
 >
->		1. ErrorCode(상태코드값) : ``getAttribute("javax.servlet.error.status_code");``
+>		1. ErrorCode(상태코드값) : ``getAttribute("javax.servlet.error.status_code");`` (반환값 : Integer)
 >
->		1. ErrorClass : ``getAttribute("javax.servlet.error.exception");``
+>		1. ErrorClass : ``getAttribute("javax.servlet.error.exception");`` (반환값 : Object 또는 Throwable)
 >
->		1. Error발생 URI : ``getAttribute("javax.servlet.error.request_uri");``
+>		1. Error발생 URI : ``getAttribute("javax.servlet.error.request_uri");`` (반환값 : String)
 >
->		1. Error메시지 : ``getAttribute("javax.servlet.error.message");``
+>		1. Error메시지 : ``getAttribute("javax.servlet.error.message");`` (반환값 : String)
 >
->		1. Error타입(Error클래스와 동일) : ``getAttribute("javax.servlet.error.exception_type");``
+>		1. Error타입(``web.xml``에서 ``<exception-type>``설정을 했을 때만 값을 가짐) : ``getAttribute("javax.servlet.error.exception_type");`` (반환값 : Object 또는 Throwable)
