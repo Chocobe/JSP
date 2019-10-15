@@ -130,10 +130,21 @@
  	<listener>
  		<listener-class>com.edu.listener.TestSessionAttributeListener</listener-class>
  	</listener>
- -->
+
 
 	<listener>
 		<listener-class>com.edu.listener.TestServletContextListener</listener-class>
 	</listener>
 
+
+	<error-page>
+		<error-code>405</error-code>
+		<location>/errorHandle</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/errorHandle</location>
+	</error-page>
+-->
 </web-app>
