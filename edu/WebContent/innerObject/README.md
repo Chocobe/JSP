@@ -59,3 +59,59 @@
 >	### **출력**과 **버퍼**에 대한 메소드를 사용할 수 있다.
 >
 >	* ``out.print()`` 메소드와 ``out.println()``메소드는 동일한 동작을 한다. (줄바꿈이 적용되지 않음)
+
+---
+
+## 내장객체 - pageContext
+
+>	### ``pageContext``객체의 기능
+>
+>	1. 페이지 이동
+>
+>	1. 내장객체 반환
+
+---
+
+>	### ``pageContext``객체의 페이지 이동 기능
+>
+>	1. ``pageContext.forward("relative URL pattern")``
+>
+>		* 인자값으로 지정된 페이지로 이동한다.
+>
+>	1. ``pageContext.include("relavie URL pattern")``
+>
+>		* 현재 페이지에 인자값으로 지정된 페이지를 포함시킨다.
+
+---
+
+>	### ``pageContext``객체의 내장객체 반환 기능
+>
+>	* 내장객체의 생성은 ``_jspService()``메소드에서 수행된다.
+>
+>	* 자동으로 생성된 내장객체를 그대로 사용하는 방법은 ``_jspService()``메소드 내에서만 가능하다. 
+>
+>	* ``_jspService()``메소드 내에서 수행되는 JSP태그 :
+>
+>		1. 스크립트릿 : ``<% ... %>``
+>
+>		1. 표현식 : ``<%= ... %>``
+>
+>	* 선언문과 같이 ``_jspService()``메소드 밖에서 내장객체를 사용하려면, ``pageContext``객체에서 내장객체를 가져와야 한다.
+>
+>	* ``pageContext``객체의 내장객체 반환 메소드
+>
+>		1. ``getException()``
+>
+>		1. ``getPage()``
+>
+>		1. ``getRequest()``
+>
+>		1. ``getResponse()``
+>
+>		1. ``getServletConfig()``
+>
+>		1. ``getServletContext()``
+>
+>		1. ``getSession()``
+>
+>		1. ``getOut()``
