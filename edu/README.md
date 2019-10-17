@@ -13,3 +13,5 @@
 ---
 
 > ### JSP
+>
+>	* #### [:camel: JSP - 기본](https://github.com/Chocobe/JSP_practice/tree/master/edu/WebContent/jsp_basic)
