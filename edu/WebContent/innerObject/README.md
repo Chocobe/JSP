@@ -6,31 +6,31 @@
 >
 >	* request
 >
->		* ``HttpServletRequest 객체``
+>		* ``javax.servlet.http.HttpServletRequest 객체``
 >
 >	* response
 >
->		* ``HttpServletResponse 객체``
+>		* ``javax.servlet.http.HttpServletResponse 객체``
 >
 >	* session
 >
->		* ``HttpSession 객체``
+>		* ``javax.servlet.http.HttpSession 객체``
 >
 >	* application
 >
->		* ``ServletContext 객체``
+>		* ``javax.servlet.ServletContext 객체``
 >
 >	* config
 >
->		* ``ServletConfig 객체``
+>		* ``javax.servlet.ServletConfig 객체``
 >
 >	* out
 >
->		* ``JspWriter 객체``
+>		* ``javax.servlet.jsp.JspWriter 객체``
 >
 >	* pageContext
 >
->		* ``PageContext 객체``
+>		* ``javax.servlet.jsp.PageContext 객체``
 
 ---
 
