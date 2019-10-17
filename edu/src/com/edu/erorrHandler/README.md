@@ -28,20 +28,20 @@
 >
 >	* ``web.xml`` 설정하기 - 방법1
 >
->	```xml
->		<error-page>
->			<error-code>500(상태코드)</error-code> <!-- 500 : 서버내부 프로그램 에러 -->
->			<location>/에러처리페이지</location> <!-- 에러를 처리할 페이지의 URI값 -->
->		</error-page>
+>		```xml
+>			<error-page>
+>				<error-code>500(상태코드)</error-code> <!-- 500 : 서버내부 프로그램 에러 -->
+>				<location>/에러처리페이지</location> <!-- 에러를 처리할 페이지의 URI값 -->
+>			</error-page>
 >		```
 >
 >	* ``web.xml`` 설정하기 - 방법2
 >
->	```xml
->		<error-page>
->			<exception-type>java.lang.NullPointerException</exception-type> <!-- 에러 클래스 -->
->			<location>URI값</location> <!-- 에러를 처리할 페이지의 URI값 -->
->		</error-page>
+>		```xml
+>			<error-page>
+>				<exception-type>java.lang.NullPointerException</exception-type> <!-- 에러 클래스 -->
+>				<location>URI값</location> <!-- 에러를 처리할 페이지의 URI값 -->
+>			</error-page>
 >		```
 
 ---
