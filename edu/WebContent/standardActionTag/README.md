@@ -12,7 +12,7 @@
 
 ---
 
->	### <jsp:forward>
+>	### ``<jsp:forward>``
 >
 >	* RequestDispatcher 객체의 **forward()** 메소드 기능을 수행한다.
 >
@@ -26,7 +26,7 @@
 
 ---
 
->	### <jsp:include>
+>	### ``<jsp:include>``
 >
 >	* RequestDispatcher 객체의 **include()** 메소드 기능을 수행한다.
 >
@@ -78,11 +78,11 @@
 
 ---
 
->	### 자바빈즈 - <jsp:useBean>
+>	### 자바빈즈 - ``<jsp:useBean>``
 >
 >	* 객체를 생성하거나, 이미 생성되어 있는 객체를 추출한다.
 >
->	* <jsp:useBean> 의 속성
+>	* ``<jsp:useBean>`` 의 속성
 >
 >	>	* id 속성
 >	>
@@ -94,7 +94,7 @@
 >	>
 >	>		* 사용하려는 자바빈즈 객체의 **실제 클래스명** 과 **페키지명**을 함께 지정한다.
 >	>
->	>		* ``<%@ page import="페키지명.클래스명" %> 지시자를 설정한다면, 클래스명으로만 사용 가능
+>	>		* ``<%@ page import="페키지명.클래스명" %>`` 지시자를 설정한다면, 클래스명으로만 사용 가능
 >	>
 >	>		* ``class="페키지명.클래스명``
 >
@@ -112,11 +112,11 @@
 
 ---
 
->	### 자바빈즈 - <jsp:getProperty>
+>	### 자바빈즈 - ``<jsp:getProperty>``
 >
 >	* 자바빈즈의 속성값을 가져올 때 사용한다.
 >
->	* <jsp:getProperty> 속성
+>	* ``<jsp:getProperty>`` 속성
 >
 >	>	* name 속성
 >	>
@@ -132,11 +132,11 @@
 
 ---
 
->	### 자바빈즈 - <jsp:setProperty>
+>	### 자바빈즈 - ``<jsp:setProperty>``
 >
 >	* 자바빈즈의 속성값을 변경할 때 사용한다.
 >
->	* <jsp:setProperty> 속성
+>	* ``<jsp:setProperty>`` 속성
 >
 >	>	* name 속성
 >	>
