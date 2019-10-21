@@ -109,6 +109,22 @@
 >	>		* ``scope="session"`` : 클라이언트 단위로 사용
 >	>
 >	>		* ``scope="application"`` : 웹 애플리케이션 단위로 사용
+>
+>	>	### 자바빈즈를 다른 페이지에 전달하기 위해서는 다음 조건을 만족해야 한다.
+>	>
+>	>		* 자바빈을 **전달하는 측**과 **전달받는 측** 의 ``class``, ``id``, ``scope``가 같아야 한다.
+>	>
+>	>		* 사용 예)
+>	>
+>	>		```java
+>	>			// 자바빈즈 송신 측
+>	>			<jsp:useBean class="com.test.MyBean" id="myBeans" scope="session"/>
+>	>			
+>	>			// --------------------------------------------------
+>	>
+>	>			// 자바빈즈 수신 측
+>	>			<jsp:useBean class="com.test.MyBean" id="myBeans" scope="session"/>
+>	>		```
 
 ---
 
