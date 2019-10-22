@@ -134,4 +134,6 @@
 
 # Connection Pool
 
->	참고페이지 : http://tomcat.apache.org/tomcat-6.0-doc/jndi-resources-howto.html
+>	Tomcat 설정 참조 페이지 : http://tomcat.apache.org/tomcat-6.0-doc/jndi-resources-howto.html
+>
+>	JNDI 참조 페이지 : https://nine01223.blog.me/220339886074
