@@ -129,3 +129,9 @@
 >	>			```
 >	>
 >	>	* 첨자는 사용하지 않는다.
+
+---
+
+# Connection Pool
+
+>	참고페이지 : http://tomcat.apache.org/tomcat-6.0-doc/jndi-resources-howto.html
