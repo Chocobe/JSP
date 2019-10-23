@@ -24,7 +24,7 @@
 		<jsp:setProperty name="book" property="*"/>
 		
 		<%
-		request.setAttribute("book", book);
+		application.setAttribute("book", book);
 		%>
 		
 		<jsp:forward page="bookOutput.jsp"/>
