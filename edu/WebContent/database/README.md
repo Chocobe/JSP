@@ -126,7 +126,7 @@
 >	>			preStatement.setString(1, "문자열값");
 >	>			preStatement.setInt(2, 정수형값);
 >	>			preStatement.setString(3, "문자열값");
->	>			```
+>	>		```
 >	>
 >	>	* 첨자는 사용하지 않는다.
 
@@ -134,6 +134,99 @@
 
 # Connection Pool
 
->	Tomcat 설정 참조 페이지 : http://tomcat.apache.org/tomcat-6.0-doc/jndi-resources-howto.html
+>	* Tomcat 설정 참조 페이지 : http://tomcat.apache.org/tomcat-6.0-doc/jndi-resources-howto.html
 >
->	JNDI 참조 페이지 : https://nine01223.blog.me/220339886074
+>	* JNDI 참조 페이지 : https://nine01223.blog.me/220339886074
+>
+>	* 서버에 미리 Connection객체들을 생성해 놓고, 클라이언트의 요청에 따라 제공, 반환받는 방식의 연결방식이다.
+>
+>	* Connection 객체들은 서버가 시작될 때, 설정한 개수만큼 생성하여 서버에서 보관하게 된다.
+>
+>	* DBCP : DataBase Connection Pool
+>
+>	* Connection Pool을 사용하기 위해서는 다음 세가지 설정이 필요하다.
+>
+>		1. 서버(WAS-Tomcat)의 ``server.xml``설정
+>
+>		1. JSP, Servlet에서 서버(WAS-Tomcat)에 생성해 놓은 Connection Pool을 가져가기 위한 설정
+>
+>		1. ``WEB-INF/web.xml``에서 해당 웹 애플리케이션이 Connection Pool을 이용하기 위한 설정
+
+---
+
+>	>	### 서버(WAS-Tomcat) 설정 : ``servler.xml``
+>	>
+>	>		```xml
+>	>			<Resource driverClassName="oracle.jdbc.driver.OracleDriver"
+>	>					  url="jdbc:oracle:thin:@127.0.0.1:1521:orcl"
+>	>					  username="DB의 계정명"
+>	>					  password="해당 계정의 비밀번호"
+>	>					  name="jdbc/myoracle"
+>	>					  type="javax.sql.DataSource"
+>	>					  maxActive="4"
+>	>					  maxIdle="2"
+>	>					  maxWait="5000"/>
+>	>		```
+>	>
+>	>	* ``driverClassName`` : JDBC 드라이버 클래스를 페키지명과 클래스명을 입력한다.
+>	>
+>	>	* ``url`` : 접속하려는 DB의 주소를 입력한다. (``127.0.0.1`` 은 ``localhost``와 동일하다)
+>	>
+>	>	* ``username`` : DB에 접속하려는 계정명을 입력한다.
+>	>
+>	>	* ``password`` : 해당 계정의 비밀번호 입력한다.
+>	>
+>	>	* ``name`` : 이 리소스의 이름을 부여한다.
+>	>
+>	>	* ``type`` : 이 리소스의 타입을 설정한다.
+>	>
+>	>	* ``maxActive`` : 생성할 Connection객체 수를 지정한다.
+>	>
+>	>	* ``maxIdle`` : 일반적으로 활용할 Connection객체 수를 지정한다.
+>	>
+>	>	* ``maxWait`` : Connection객체를 가져가기 위한 최대 대기시간을 설정한다. (단위 : ms)
+>	>
+>	>		* (설정된 대기시간을 초과하게 되면, Exception이 발생된다.)
+
+--
+
+>	>	### 서버(WAS-Tomcat) 설정 - ``context.xml``
+>	>
+>	>	* ``servler.xml``에 설정한 리소스를 이용하기 위한 참조명을 설정한다.
+>	>
+>	>		```xml
+>	>			<ResourceLink global="Servlet이나 JSP에서 이 리소스를 참조하기 위한 참조명"
+>	>						  name="이 리소스의 설정된 이름"
+>	>						  type="이 리소스의 설정된 타입"/>
+>	>		```
+>	>
+>	>	* ``global`` : Servlet이나 JSP에서 이 리소스를 참조하기 위해 사용할 참조명이다.
+>	>
+>	>	* ``name`` : 이 리소스의 이름을 입력한다. (``server.xml``에 설정한 ``name``값과 동일)
+>	>
+>	>	* ``type`` : 이 리소스의 타입을 입력한다. (``server.xml``에 설정한 ``type``값과 동일)
+
+--
+
+>	>	### 웹 애플리케이션(WEB-INF/web.xml) 설정 - ``web.xml``
+>	>
+>	>	* 서버에 생성되어 있는 리로스를 참조하기 위한 설정이다.
+>	>
+>	>	* 참조할 때의 참조명은, ``context.xml``에 설정한 ``global``값을 사용한다.
+>	>
+>	>		```xml
+>	>			<resource-ref>
+>	>				<description>이 리소스에 대한 설명</description>
+>	>				<res-ref-name>참조명</res-ref-name>
+>	>				<res-type>리소스타입</res-type>
+>	>				<res-auth>이 리로스에 대한 권한이 누구인지 지정</res-auth>
+>	>			</resource-ref>
+>	>		```
+>	>
+>	>	* ``<description>`` : 이 리로스에 대한 설명
+>	>
+>	>	* ``<res-ref-name>`` : 참조할 리소스의 참조명을 입력한다. (``context.xml``에 설정한 ``global``값)
+>	>
+>	>	* ``<res-type>`` : 참조할 리소스의 타입을 입력한다. (``server.xml``, ``context.xml``, ``web.xml``에 적힌 ``type``값이 동일해야 한다.
+>	>
+>	>	* ``<res-auth>`` : 이 리소스의 권한자를 입력한다.
