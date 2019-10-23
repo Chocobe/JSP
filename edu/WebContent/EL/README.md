@@ -16,9 +16,9 @@
 >
 >	* **EL은 각 scope에 저장된 데이터를 ``${표현식(키값)}``으로 추출할 수 있다.**
 >
->	* **EL의 표현식에 scope에 대한 명시가 없으면, 좁은 scope 부터 넓은 scope 순으로 찾는다.
+>	* **EL의 표현식에 scope에 대한 명시가 없으면, 좁은 scope 부터 넓은 scope 순으로 찾는다.**
 >
->		**(request -> session -> application 순서)**
+>		**(request -> session -> application 순)**
 
 ---
 
