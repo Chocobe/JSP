@@ -210,6 +210,14 @@
 >
 >	* 커스텀 태그 라이브러리 작성 - **myTags.tld**
 >
+>		1. ``xml file``생성 
+>
+>		1. ``create XML file from a DTD file``선택 
+>
+>		1. ``select XML Catalog entry``선택 
+>
+>		1. ``Key : ...DTD JSP Tag Library 1.2//EN 선택``
+>
 >		```xml
 >			<taglib>
 >				<taglib-version>1.0</taglib-version>
