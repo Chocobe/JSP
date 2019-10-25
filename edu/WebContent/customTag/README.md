@@ -218,26 +218,26 @@
 >
 >		1. ``Key : ...DTD JSP Tag Library 1.2//EN 선택``
 >
->		```xml
->			<taglib>
->				<taglib-version>1.0</taglib-version>
->				<jsp-version>1.2</jsp-version>
->				<short-name>태그 라이브러리명</short-name>
+>			```xml
+>				<taglib>
+>					<taglib-version>1.0</taglib-version>
+>					<jsp-version>1.2</jsp-version>
+>					<short-name>태그 라이브러리명</short-name>
 >
->				<tag>
->					<name>태그명</name>
->					<tag-class>com.edu.customTag.MyTagHandler</tag-class>
->					<tei-class>com.edu.customTag.TagTEI</tei-class>
->					<body-content>JSP</body-content>
+>					<tag>
+>						<name>태그명</name>
+>						<tag-class>com.edu.customTag.MyTagHandler</tag-class>
+>						<tei-class>com.edu.customTag.TagTEI</tei-class>
+>						<body-content>JSP</body-content>
 >
->					<attribute>
->						<name>속성명</name>
->						<required>true</required>
+>						<attribute>
+>							<name>속성명</name>
+>							<required>true</required>
 >						<rtexprvalue>true</rtexprvalue>
->					</attribute>
->				</tag>
->			</taglib>
->		```
+>						</attribute>
+>					</tag>
+>				</taglib>
+>			```
 >
 >	* ``web.xml`` 설정하기
 >
