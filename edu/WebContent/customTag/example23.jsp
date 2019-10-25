@@ -14,6 +14,7 @@
 	</head>
 	
 	<body>
-		<my:first></my:first>
+		<my:first color="blue"><%= 1 + 2 %></my:first>
+		<h1>Custom Tag Test !!</h1>
 	</body>
 </html>
