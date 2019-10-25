@@ -22,18 +22,21 @@
 >
 >		```java
 >			public class MyTagHandler extends TagSupport {
+>				// 시작태그를 만나면 호출되는 메소드
 >				@Override
 >				public int doStartTag() throws JspException {
 >					// 처리 내용
 >					return super.doStartTag(); // 기본값으로 흐름 설정
 >				}
 >
+>				// 태그몸체의 처리가 완료되면 호출되는 메소드
 >				@Override
 >				public int doAfterBody() throws JspException {
 >					// 처리내용
 >					return super.doAfterBody(); // 기본값으로 흐름 설정
 >				}
 >
+>				// 끝태그를 만나면 호출되는 메소드
 >				@Override
 >				public int doEndTag() throws JspException {
 >					// 처리내용
@@ -43,6 +46,8 @@
 >		```
 >
 >	1. ``.tld``파일작성 : 작성한 Class파일을 태그에 설정
+>
+>	1. (선택사항) 태그의 유효성을 검사하려면 TEI 클래스를 작성하고 ``.tld``에 설정한다.
 >
 >	1. ``web.xml``설정 : ``.tld``파일(커스텀 태그 라이브러리)를 JSP에서 import할 수 있도록 설정
 >
