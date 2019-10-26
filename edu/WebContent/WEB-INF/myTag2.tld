@@ -9,4 +9,30 @@
 		<tag-class>com.edu.customTag.MyCustomTag2</tag-class>
 		<body-content>scriptless</body-content>
 	</tag>
+	
+	<tag>
+		<name>third</name>
+		<tag-class>com.edu.customTag.MyCustomTag3</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	
+	<tag>
+		<name>fourth</name>
+		<tag-class>com.edu.customTag.MyCustomTag4</tag-class>
+		<body-content>empty</body-content>
+		
+		<attribute>
+			<name>num1</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.Integer</type>
+		</attribute>
+		
+		<attribute>
+			<name>num2</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.Integer</type>
+		</attribute>
+	</tag>
 </taglib>

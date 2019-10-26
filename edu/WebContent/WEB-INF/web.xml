@@ -160,6 +160,6 @@
 			<taglib-uri>http://myTags.com</taglib-uri>
 			<taglib-location>/WEB-INF/myTag.tld</taglib-location>
 		</taglib>
-	</jsp-config>	
+	</jsp-config>
 	
 </web-app>
