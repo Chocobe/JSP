@@ -16,7 +16,7 @@
 >
 >	* 클래스 기반 커스텀 태그와 태그 기반 커스텀 태그 로 작성할 수 있다.
 >
->	[태그 기반 커스텀 태그](https://github.com/Chocobe/JSP_practice/tree/master/edu/WebContent/WEB-INF/tags)
+>	* [태그 기반 커스텀 태그](https://github.com/Chocobe/JSP_practice/tree/master/edu/WebContent/WEB-INF/tags)
 
 ---
 
