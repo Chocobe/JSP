@@ -165,7 +165,7 @@
 
 ---
 
->	## 커스텀 태그 작성 예
+>	## 커스텀 태그 작성 예 (JSP 1.2버전)
 >
 >	* 태그 헨들러 클래스 작성 - **MyTagHandler.java**
 >
@@ -216,7 +216,7 @@
 >
 >		1. ``select XML Catalog entry``선택 
 >
->		1. ``Key : ...DTD JSP Tag Library 1.2//EN 선택``
+>		1. ``Key : ...DTD JSP Tag Library 1.2//EN`` 선택
 >
 >			```xml
 >				<taglib>
@@ -254,6 +254,107 @@
 >
 >		```jsp
 >			<%@ taglib prefix="이 JSP페이지에서 사용할 태그명" uri="web.xml에서 설정한 uri값 또는 절대경로" %>
+>			<%@ page ... %>
+>
+>			<prefix에 설정한 이름:.tld의 <tag>에 설정한 <name>값>태그몸체</...>
+>		```
+
+---
+
+>	## JSP 2.1버전 특징
+>
+>	* JSP 1.2 버전을 좀 더 편하게 작성할 수 있도록 개선되었다.
+>
+>	* JSP 1.2버전의 ``doStartTag()``, ``doAfterBody()``, ``doEndTag()``를 ``doTag()``하나로 구현한다.
+>
+>	* JSP 2.1버전의 ``.tld``파일을 ``WEB-INF``하위 폴더에  저장하고, ``web.xml``파일에 설정하지 않는다. (자동 인식)
+
+---
+
+>	## JSP 2.1버전 커스텀 태그 작성
+>
+>	1. 동작 Class파일 작성 : 커스텀 태그의 실제 동작을 Class파일로 작성 (각 단계별 메소드 재정의)
+>
+>		```java
+>			public class MyTag {
+>				@Override
+>				public void doTag() throws JspException, IOException {
+>					// JSP 1.2버전의 doStartTag(), doAfterBody(), doEndTag()가 통합된 메소드
+>				}
+>			}
+>		```
+>
+>	1. ``.tld``파일작성 : 작성한 Class파일을 태그에 설정
+>
+>	1. (선택사항) 태그의 유효성을 검사하려면 TEI 클래스를 작성하고 ``.tld``에 설정한다. (JSP 1.2버전과 동일)
+>
+>	1. 사용할 JSP파일에서 ``<%@ taglib prefix="호출용 태그명 정의" uri=".tld에 설정한 uri값" %>`` 설정 (JSP 2.1버전은 ``.tld`` 파일에 ``uri``값 설정)
+>
+>	* 속성과 ``.tei``는 JSP 1.2버전과 동일하다.
+
+---
+
+>	## 커스텀 태그 작성 예 (JSP 2.1버전)
+>
+>	* 태그 헨들러 클래스 작성 - **MyTag_1.java**
+>
+>		```java
+>			public class MyTag_1 {
+>				@Override
+>				public void doTag() throws JspException, IOException {
+>					// JSP 1.2버전의 doStartTag(), doAfterBody(), doEndTag()가 통합된 메소드
+>				}
+>			}
+>		```
+>
+>	* TEI 클래스 작성 - **MyTEI_1.java** (JSP 1.2버전과 동일)
+>
+>		```java
+>			public class MyTEI_1 extends TagExtraInfo {
+>				@Override
+>				public boolean isValid(TagData data) {
+>					String value = data.getAttributeString("value");
+>					if(value != null) {
+>						return true;
+>					
+>					} else {
+>						return false;
+>					}
+>				}
+>			}
+>		```
+>
+>	* 커스텀 태그 라이브러리 작성 - **myTags.tld**
+>
+>		1. ``xml file``생성 
+>
+>		1. ``create XML file an XML schema file``선택 
+>
+>		1. ``select XML Catalog entry``선택 
+>
+>		1. ``Key : .../javaee/web-jsptaglibrary_2_1_xsd`` 선택
+>
+>		1. ``Namespace Information``에서 ``Namespace Information값``을 ``http://java.sun.com/...``로 선택 & EDIT
+>
+>		1. ``prefix``값 삭제 & 확인
+>
+>			```xml
+>				<tlib-version>1.0</tlib-version>
+>				<short-name>이 태그 라이브러리의 작명</short-name>
+>				<uri>이 태그 라이브러리에 접근하기 위한 임의의 경로 작성</uri>
+>
+>				<tag>
+>					<name>태그명</name>
+>					<tag-class>com.edu.customTag.MyTag_1</tag-class>
+>					<tei-class>com.edu.customTag.MyTEI_1</tei-class>
+>					<body-content>scriptless</body-content>
+>				</tag>
+>			```
+>
+>	* JSP 페이지에서 해당 태그 사용하기
+>
+>		```jsp
+>			<%@ taglib prefix="이 JSP페이지에서 사용할 태그명" uri=".tld 에서 설정한 uri값 또는 절대경로" %>
 >			<%@ page ... %>
 >
 >			<prefix에 설정한 이름:.tld의 <tag>에 설정한 <name>값>태그몸체</...>
