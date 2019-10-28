@@ -39,3 +39,9 @@
 >	* #### [:camel: 클래스 기반 커스텀 태그](https://github.com/Chocobe/JSP_practice/tree/master/edu/WebContent/customTag)
 >
 >	* #### [:camel: 태그 기반 커스텀 태그](https://github.com/Chocobe/JSP_practice/tree/master/edu/WebContent/WEB-INF/tags)
+
+---
+
+>	### JSTL
+>
+>	* #### [:camel: JSTL](https://github.com/Chocobe/JSP_practice/tree/master/edu/WebContent/JSTL)
