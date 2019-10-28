@@ -67,4 +67,18 @@
 >
 >			* "NESTED" : 시작태그와 끝태그 사이에서 사용
 >
->	``<%@ variable name-given="result" variable-class="java.lang.Integer" scope="AT_END" %>``
+>	```java
+>		<%@ variable name-given="result" variable-class="java.lang.Long" scope="AT_END" %>
+>	```
+
+---
+
+>	## 커스텀 태그의 몸체 처리
+>
+>	* ``<jsp:doBody>`` 태그를 이용하여 몸체의 데이터를 추출한다.
+>
+>	* 속성
+>
+>	```java
+>		<jsp:doBody var="저장할 변수명" scope="사용할 범위 지정"/>
+>	```
