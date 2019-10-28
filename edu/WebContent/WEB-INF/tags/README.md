@@ -82,3 +82,36 @@
 >	```java
 >		<jsp:doBody var="저장할 변수명" scope="사용할 범위 지정"/>
 >	```
+
+---
+
+>	## 커스텀 태그의 동적 속성 사용하기
+>
+>	* 커스텀 태그의 속성을 동적으로 생성하는 방법이다.
+>
+>	* 동적으로 생성한 속성은 **키/값**의 형태로 ``Map``객체로 생성된다.
+>
+>	* 키값 : ``동적속성객체.key``
+>
+>	* 데이터값 : ``동적속성객체.value``
+>
+>	* 동적속성 선언
+>
+>		```java
+>			<%@ tag dynamic-attributes="동적속성명" %>
+>		```
+>
+>	* 사용 예
+>
+>		```java
+>			<%@ taglib prefix="c" tagdir="http://java.sun.com/jsp/jstl/core" %>
+>
+>			<%@ attribute name="location" required="true" %>
+>			<%@ tag dynamic-attributes="options" %>
+>			
+>			<select name="${location}"/>
+>				<c:forEach var="item" items="${options}"/>
+>					<option value="item.key">${item.value}</option>
+>				</c:forEach>
+>			</select>
+>		```
