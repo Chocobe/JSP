@@ -239,7 +239,7 @@
 >		%>
 >
 >		<c:forEach var="item" items="myList">
->			<c:out value="item"/>
+>			<c:out value="${item}"/>
 >		</c:forEach>
 >	```
 
