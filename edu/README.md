@@ -44,4 +44,6 @@
 
 >	### JSTL
 >
->	* #### [:camel: JSTL](https://github.com/Chocobe/JSP_practice/tree/master/edu/WebContent/JSTL)
+>	* #### [:camel: JSTL - core](https://github.com/Chocobe/JSP_practice/tree/master/edu/WebContent/JSTL_core)
+>
+>	* #### [:camel: JSTL - formatting](https://github.com/Chocobe/JSP_practice/tree/master/edu/WebContent/JSTL_formatting)
