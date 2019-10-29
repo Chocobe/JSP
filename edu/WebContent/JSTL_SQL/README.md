@@ -25,7 +25,7 @@
 >				driver="oracle.jdbc.driver.OracleDriver"
 >				url="jdbc:oracle:thin:@127.0.0.1:1521:orcl"
 >				user="scott"
->				password="tiger"
+>				password="tiger"/>
 >		```
 
 ---
