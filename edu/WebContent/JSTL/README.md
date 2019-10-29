@@ -336,5 +336,6 @@
 >		* ``url`` : 이동할 경로
 >
 >	```java
->		<c:redirect url="주소값"/>
+>		<c:url var="주소값을 저장할 변수명" value="주소값"/>
+>		<c:redirect url="주소값(``<c:url>``로 생성한 변수)"/>
 >	```
