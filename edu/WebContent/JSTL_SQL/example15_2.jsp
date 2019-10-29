@@ -9,8 +9,8 @@
 
 <sql:update dataSource="jdbc/myoracle">
 	UPDATE TEST SET PASSWORD=? WHERE ID=?
-	<sql:param value="${\"1004\"}"/>
-	<sql:param value="${\"aa\"}"/>
+	<sql:param value="${'1004'}"/>
+	<sql:param value="${'aa'}"/>
 </sql:update>
 
 <sql:query var="rs" dataSource="jdbc/myoracle">
