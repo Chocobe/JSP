@@ -1,4 +1,4 @@
-# Formatting
+# JSTL - Formatting
 
 >	## Formatting 이란?
 >

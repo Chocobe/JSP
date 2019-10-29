@@ -1,4 +1,4 @@
-# JSTL
+# JSTL - Core
 
 >	## JSTL 이란?
 >
