@@ -16,7 +16,7 @@
 >
 >		* ``user`` : DB에 접속할 ID (예 : "scott")
 >
->		* ``password" : DB에 접속할 ID의 비밀번호 (예 : "tiger")
+>		* ``password`` : DB에 접속할 ID의 비밀번호 (예 : "tiger")
 >
 >		```java
 >			<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
