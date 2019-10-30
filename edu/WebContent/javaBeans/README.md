@@ -1,5 +1,9 @@
 # 표준액션태그 / JSP 자바빈즈
 
+[:camel: 상위 페이지](https://github.com/Chocobe/JSP_practice/tree/master/edu)
+
+---
+
 ## 표준액션태그 란?
 
 >	* JSP에서 사용할 수 있는 XML기반의 태그이다.

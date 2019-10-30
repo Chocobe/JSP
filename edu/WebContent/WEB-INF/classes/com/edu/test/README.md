@@ -1,5 +1,9 @@
 # Servlet - 기본
 
+[:camel: 상위 페이지](https://github.com/Chocobe/JSP_practice/tree/master/edu)
+
+---
+
 * Servlet 페이지 설정하기 (web.xml 설정)
 
 	* ``web.xml``을 사용하여 서블릿 설정하기

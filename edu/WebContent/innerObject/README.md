@@ -1,5 +1,9 @@
 # 내장객체
 
+[:camel: 상위 페이지](https://github.com/Chocobe/JSP_practice/tree/master/edu)
+
+---
+
 ## 내장객체 란?
 
 >	* JSP파일을 Java 파일로 변환할 때 생성되는 ``_jspService()`` 메소드에 자동으로 생성되는 변수들을 말한다.

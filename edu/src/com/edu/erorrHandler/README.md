@@ -1,5 +1,9 @@
 # Error page
 
+[:camel: 상위 페이지](https://github.com/Chocobe/JSP_practice/tree/master/edu)
+
+---
+
 ## ``try ~ catch``
 >
 >	* 에러 발생 가능한 코드를 직접 처리하는 방법

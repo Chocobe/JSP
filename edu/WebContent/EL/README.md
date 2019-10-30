@@ -1,5 +1,9 @@
 # EL (Expression Language)
 
+[:camel: 상위 페이지](https://github.com/Chocobe/JSP_practice/tree/master/edu)
+
+---
+
 >	## EL 특징
 >
 >	* EL은 자바코드를 사용했던 모든 부분에서 사용할 수 있다.
